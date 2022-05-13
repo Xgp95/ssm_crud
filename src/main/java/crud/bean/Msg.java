@@ -1,7 +1,4 @@
 package crud.bean;
-
-import sun.awt.SunHints;
-
 import java.util.HashMap;
 import java.util.Map;
 
