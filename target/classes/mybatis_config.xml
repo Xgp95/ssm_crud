@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 外部引入数据库配置文件 -->
+    <!--    <properties resource="dbconfig.properties"/>-->
+    <settings>
+        <!--驼峰命名规则 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--允许插入NULL值-->
+        <setting name="jdbcTypeForNull" value="NULL"/>
+        <!--延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--开启二级缓存-->
+        <!--        <setting name="cacheEnabled" value="true"/>-->
+        <!--LOG4J日志 -->
+        <!--        <setting name="logImpl" value="LOG4J"/>-->
+    </settings>
+
+    <!--    <typeAliases>-->
+    <!--        <package name="crud.bean"/>-->
+    <!--    </typeAliases>-->
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--分页参数合理化(排除负数页和超过总页数)-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
+    <!--    枚举类型的处理-->
+    <!--    <typeHandlers>-->
+    <!--        <typeHandler handler="org.apache.ibatis.type.EnumTypeHandler" javaType="com.ssm.bean.EmpStatus"></typeHandler>-->
+    <!--    </typeHandlers>-->
+    <!--    <typeHandlers>-->
+    <!--        <typeHandler handler="com.ssm.typehandler.MyEnumTypeHandler" javaType="com.ssm.bean.EmpStatus"></typeHandler>-->
+    <!--    </typeHandlers>-->
+
+    <!--    <environments default="mysql_employee_prop">-->
+
+    <!--        <environment id="mysql_employee_prop">-->
+    <!--            <transactionManager type="JDBC"/>-->
+    <!--            <dataSource type="POOLED">-->
+    <!--                <property name="driver" value="${jdbc.driver}"/>-->
+    <!--                <property name="url" value="${jdbc.url}"/>-->
+    <!--                <property name="username" value="${jdbc.username}"/>-->
+    <!--                <property name="password" value="${jdbc.password}"/>-->
+    <!--            </dataSource>-->
+    <!--        </environment>-->
+
+    <!--        <environment id="mysql_employee">-->
+    <!--            <transactionManager type="JDBC"/>-->
+    <!--            <dataSource type="POOLED">-->
+    <!--                <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+    <!--                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>-->
+    <!--                <property name="username" value="root"/>-->
+    <!--                <property name="password" value="123456"/>-->
+    <!--            </dataSource>-->
+    <!--        </environment>-->
+
+    <!--    </environments>-->
+
+
+    <!--    <mappers>-->
+    <!--        <mapper resource="mapper/EmployeeDaoMapper.xml"/>-->
+    <!--        <mapper resource="mapper/DeptDaoMapper.xml"/>-->
+    <!--            <package name="mapper"/>-->
+    <!--    </mappers>-->
+
+</configuration>

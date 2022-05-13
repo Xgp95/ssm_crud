@@ -1,0 +1,17 @@
+crud\service\DeptService.class
+crud\dao\EmpMapper.class
+crud\bean\DeptExample$Criteria.class
+crud\bean\EmpExample.class
+crud\dao\DeptMapper.class
+crud\bean\Emp.class
+crud\bean\Dept.class
+crud\bean\EmpExample$GeneratedCriteria.class
+crud\controller\DeptController.class
+crud\bean\DeptExample.class
+crud\bean\DeptExample$Criterion.class
+crud\bean\DeptExample$GeneratedCriteria.class
+crud\controller\EmpController.class
+crud\bean\EmpExample$Criteria.class
+crud\bean\EmpExample$Criterion.class
+crud\bean\Msg.class
+crud\service\EmpService.class

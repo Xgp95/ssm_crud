@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--若springmvc中只扫描controller,则需要加上service,和dao的扫描功能-->
+    <!--    <context:component-scan base-package="crud.service"/>-->
+    <!--    <context:component-scan base-package="crud.dao"/>-->
+    <context:component-scan base-package="crud">
+        <!--扫描除了Controller外的控制器exclude-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <context:property-placeholder location="classpath:dbconfig.properties"/>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" scope="singleton">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--        <property name="poolPreparedStatements" value="true"/>-->
+        <!--        <property name="initialSize" value="${initialSize}"/>-->
+        <!--        <property name="maxActive" value="${maxActive}"/>-->
+        <!--        <property name="maxIdle" value="${maxIdle}"/>-->
+        <!--        <property name="minIdle" value="${minIdle}"/>-->
+        <!--        <property name="maxWait" value="${maxWait}"/>-->
+        <!--        <property name="removeAbandonedTimeout" value="${removeAbandonedTimeout}"/>-->
+        <!--        <property name="removeAbandoned" value="${removeAbandoned}"/>-->
+        <!-- sql 心跳 -->
+        <!--        <property name="testWhileIdle" value="true"/>-->
+        <!--        <property name="testOnBorrow" value="false"/>-->
+        <!--        <property name="testOnReturn" value="false"/>-->
+        <!--        <property name="validationQuery" value="select 1"/>-->
+        <!--        <property name="timeBetweenEvictionRunsMillis" value="60000"/>-->
+        <!--        <property name="numTestsPerEvictionRun" value="${maxActive}"/>-->
+    </bean>
+
+    <!--配置sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis_config.xml"/>
+        <!--mapper和.xml不在同一目录需要配置mapperLocations-->
+        <property name="mapperLocations" value="classpath:mapper/**/*.xml"/>
+    </bean>
+
+    <!--配置可以批量执行的sqlSession-->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+        <constructor-arg name="executorType" value="BATCH"></constructor-arg>
+    </bean>
+
+    <!--扫描映射文件(mapper动态代理) 配置扫描器，将mybatis接口的实现加入到ioc容器中-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="crud.dao"/>
+    </bean>
+
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--开启基于注解的事务，使用xml配置形式的事务（必要主要的都是使用配置式）  -->
+    <aop:config>
+        <!-- 切入点表达式 -->
+        <aop:pointcut expression="execution(* crud.service..*(..))" id="txPoint"/>
+        <!-- 配置事务增强 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>
+    </aop:config>
+    <!--配置事务增强，事务如何切入  -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!-- 所有方法都是事务方法 -->
+            <tx:method name="*"/>
+            <!--以get开始的所有方法  -->
+            <tx:method name="get*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 开启注解 -->
+    <mvc:annotation-driven/>
+    <!--transaction-manager="transactionManager"一定要加上,否则会报错,该配置是以事物的方式开启注解-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>
+

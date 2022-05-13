@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="2" failures="0" name="MapperTest" time="1.08" errors="1" skipped="0">
+  <properties>
+    <property name="idea.version" value="2020.3.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_261\jre\bin"/>
+    <property name="java.vm.version" value="25.261-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Code\ssm_crud"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Code\ssm_crud"/>
+    <property name="java.runtime.version" value="1.8.0_261-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\Program Files\Java\jdk1.8.0_261\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Administrator\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.8.0_261\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Program Files\Java\jdk1.8.0_261\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.timezone" value="GMT+08:00"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="java.class.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license;D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk1.8.0_261\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2020.3.2 install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_261"/>
+    <property name="java.ext.dirs" value="D:\Program Files\Java\jdk1.8.0_261\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.8.0_261\jre\lib\resources.jar;D:\Program Files\Java\jdk1.8.0_261\jre\lib\rt.jar;D:\Program Files\Java\jdk1.8.0_261\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.8.0_261\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.8.0_261\jre\lib\jce.jar;D:\Program Files\Java\jdk1.8.0_261\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.8.0_261\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.8.0_261\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="MapperTest" name="queryTest" time="0.418">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MapperTest.queryTest(MapperTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>2022-04-28 16:51:04,089 main ERROR Invalid status level specified: DEBUG . Defaulting to ERROR.
+2022-04-28 16:51:04,147 main ERROR Policies contains an invalid element or attribute &quot;TimeBasedTriggerzingPolicy&quot;
+2022-04-28 16:51:04 [main] INFO  org.springframework.test.context.web.WebTestContextBootstrapper - 
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-28 16:51:04 [main] INFO  org.springframework.test.context.web.WebTestContextBootstrapper - 
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2de23121, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@63475ace, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4988d8b8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c0c2f8d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@305b7c14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6913c1fb, org.springframework.test.context.event.EventPublishingTestExecutionListener@66d18979]
+2022-04-28 16:51:04 [main] DEBUG org.apache.ibatis.logging.LogFactory - 
+Logging initialized using &apos;class org.apache.ibatis.logging.slf4j.Slf4jImpl&apos; adapter.
+2022-04-28 16:51:04 [main] TRACE org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Scanning file [D:\Code\ssm_crud\target\classes\crud\dao\DeptMapper.class]
+2022-04-28 16:51:04 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Identified candidate component class: file [D:\Code\ssm_crud\target\classes\crud\dao\DeptMapper.class]
+2022-04-28 16:51:04 [main] TRACE org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Scanning file [D:\Code\ssm_crud\target\classes\crud\dao\EmpMapper.class]
+2022-04-28 16:51:04 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Identified candidate component class: file [D:\Code\ssm_crud\target\classes\crud\dao\EmpMapper.class]
+2022-04-28 16:51:04 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Creating MapperFactoryBean with name &apos;deptMapper&apos; and &apos;crud.dao.DeptMapper&apos; mapperInterface
+2022-04-28 16:51:04 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Enabling autowire by type for MapperFactoryBean with name &apos;deptMapper&apos;.
+2022-04-28 16:51:04 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Creating MapperFactoryBean with name &apos;empMapper&apos; and &apos;crud.dao.EmpMapper&apos; mapperInterface
+2022-04-28 16:51:04 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - 
+Enabling autowire by type for MapperFactoryBean with name &apos;empMapper&apos;.
+2022-04-28 16:51:05 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - 
+Parsed configuration file: &apos;class path resource [mybatis_config.xml]&apos;
+2022-04-28 16:51:05 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - 
+Parsed mapper file: &apos;file [D:\Code\ssm_crud\target\classes\mapper\DeptMapper.xml]&apos;
+2022-04-28 16:51:05 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - 
+Parsed mapper file: &apos;file [D:\Code\ssm_crud\target\classes\mapper\EmpMapper.xml]&apos;
+2022-04-28 16:51:05 [main] DEBUG org.jboss.logging - 
+Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2022-04-28 16:51:05 [main] INFO  org.hibernate.validator.internal.util.Version - 
+HV000001: Hibernate Validator 5.4.1.Final
+2022-04-28 16:51:05 [main] INFO  org.springframework.mock.web.MockServletContext - 
+Initializing Spring TestDispatcherServlet &apos;&apos;
+2022-04-28 16:51:05 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - 
+Initializing Servlet &apos;&apos;
+2022-04-28 16:51:05 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - 
+Completed initialization in 7 ms
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.SqlSessionUtils - 
+Creating a new SqlSession
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.SqlSessionUtils - 
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@144ab54]
+2022-04-28 16:51:06 [main] DEBUG SQL_CACHE - 
+Cache Hit Ratio [SQL_CACHE]: 0.0
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - 
+JDBC Connection [jdbc:mysql://localhost:3306/ssm_crud, UserName=root@localhost, MySQL Connector Java] will be managed by Spring
+2022-04-28 16:51:06 [main] DEBUG crud.dao.EmpMapper.selectByExampleWithDept_COUNT - 
+==&gt;  Preparing: SELECT count(0) FROM tbl_emp LEFT JOIN tbl_dept ON d_id = dept_id
+2022-04-28 16:51:06 [main] DEBUG crud.dao.EmpMapper.selectByExampleWithDept_COUNT - 
+==&gt; Parameters: 
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept_COUNT - 
+&lt;==    Columns: count(0)
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept_COUNT - 
+&lt;==        Row: 2127
+2022-04-28 16:51:06 [main] DEBUG crud.dao.EmpMapper.selectByExampleWithDept_COUNT - 
+&lt;==      Total: 1
+2022-04-28 16:51:06 [main] DEBUG crud.dao.EmpMapper.selectByExampleWithDept - 
+==&gt;  Preparing: select emp_id, emp_name, gender, email, d_id, dept_id, dept_name from tbl_emp left join tbl_dept on d_id = dept_id LIMIT ?, ?
+2022-04-28 16:51:06 [main] DEBUG crud.dao.EmpMapper.selectByExampleWithDept - 
+==&gt; Parameters: 2120(Long), 10(Integer)
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==    Columns: emp_id, emp_name, gender, email, d_id, dept_id, dept_name
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2121, d0eeb73032, 1, d0eeb73032@123.com, 2, 2, ���Բ�
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2122, 236b4e5ae3, 1, 236b4e5ae3@123.com, 1, 1, ������
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2123, 32a40e25d6, 0, 32a40e25d6@123.com, 3, 3, ���²�
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2124, f94b591c29, 0, f94b591c29@123.com, 3, 3, ���²�
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2125, f3c59bfa6d, 0, f3c59bfa6d@123.com, 2, 2, ���Բ�
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2126, cbac07de4d, 0, cbac07de4d@123.com, 2, 2, ���Բ�
+2022-04-28 16:51:06 [main] TRACE crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==        Row: 2127, c9e5bc51e4, 1, c9e5bc51e4@123.com, 2, 2, ���Բ�
+2022-04-28 16:51:06 [main] DEBUG crud.dao.EmpMapper.selectByExampleWithDept - 
+&lt;==      Total: 7
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.SqlSessionUtils - 
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@144ab54]
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.SqlSessionUtils - 
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@144ab54]
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.SqlSessionUtils - 
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@144ab54]
+2022-04-28 16:51:06 [main] DEBUG org.mybatis.spring.SqlSessionUtils - 
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@144ab54]
+</system-out>
+  </testcase>
+  <testcase classname="MapperTest" name="mapperTest" time="0.662"/>
+</testsuite>
