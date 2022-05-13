@@ -54,7 +54,7 @@ public class MapperTest {
         PageInfo<Emp> empPageInfo = (PageInfo<Emp>) request.getAttribute("empPageInfo");
 
 //        String contentAsString = result.getResponse().getContentAsString();
-////        System.out.println(contentAsString);
+//        System.out.println(contentAsString);
 //        Gson gson = new Gson();
 //        String s = gson.toJson(contentAsString);
 //        System.out.println(s);
