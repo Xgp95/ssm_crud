@@ -1,6 +1,7 @@
 
 import org.junit.Test;
 
+import org.junit.runner.RunWith;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -8,6 +9,8 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 
 import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
 import java.io.File;
@@ -20,8 +23,8 @@ import java.util.List;
  * @date: 2022/4/20 16:15
  * @description:
  */
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = {"classpath:applicationContext_mybatis.xml"})
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:applicationContext_mybatis.xml"})
 public class MbgTest {
     public static void main(String[] args) throws Exception {
         List<String> warnings = new ArrayList<>();
