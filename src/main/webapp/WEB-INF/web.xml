@@ -6,7 +6,7 @@
 
     <!--配置spring的字符集编码格式,使用过滤器设置编码方式，配置编码过滤器-->
     <filter>
-        <filter-name>characterEncodingFilter</filter-name>
+        <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
             <param-name>encoding</param-name>
@@ -18,7 +18,7 @@
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>characterEncodingFilter</filter-name>
+        <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
