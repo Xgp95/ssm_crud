@@ -109,7 +109,7 @@ public class EmpController {
     @RequestMapping(value = "/emp", method = RequestMethod.POST)
     @ResponseBody
     public Msg saveEmp(@Valid Emp emp, BindingResult bindingResult) {
-        System.out.println(bindingResult + "#####################");
+//        System.out.println(bindingResult + "#####################");
         if (bindingResult.hasErrors()) {
             map = new HashMap<>();
             List<FieldError> fieldErrors = bindingResult.getFieldErrors();
