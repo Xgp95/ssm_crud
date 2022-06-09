@@ -55,13 +55,12 @@ public class MapperTest {
 //        Gson gson = new Gson();
 //        String s = gson.toJson(contentAsString);
 //        System.out.println(s);
-
         System.out.println("当前页码" + empPageInfo.getPageNum());
         System.out.println("总页码" + empPageInfo.getPages());
         System.out.println("总记录数" + empPageInfo.getTotal());
         System.out.println("连续显示的页码的第一页" + empPageInfo.getNavigateFirstPage());
         System.out.println("连续显示的页码的最后一页" + empPageInfo.getNavigateLastPage());
-        System.out.println("需要连续显示的页码");
+        System.out.println("需要连续显示的页码" + empPageInfo.getNavigatePages());
         int[] navigatepageNums = empPageInfo.getNavigatepageNums();
         System.out.println(Arrays.toString(navigatepageNums));
         System.out.println();
