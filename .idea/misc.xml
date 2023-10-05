@@ -3,11 +3,14 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../ssm_demo2" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm_demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm_demo2/pom.xml" />
       </list>
     </option>
   </component>
